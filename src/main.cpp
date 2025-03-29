@@ -14,7 +14,7 @@ int main() {
     if(input == "exit 0") return 0;
     if(input.find("echo") != std::string::npos){
       int pos = input.find(" ");
-      std::string str = input.substr(pos);
+      std::string str = input.substr(pos+1);
       std::cout << str << std::endl;
 
     }
