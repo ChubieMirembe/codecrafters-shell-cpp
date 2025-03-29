@@ -11,14 +11,12 @@ int main() {
 
     std::string input;
     std::getline(std::cin, input);
-    if(input == "exit 0") {
+    if(input == "exit 0") 
+    {
       return 0;
-    } else if(input.find("echo") != std::string::npos){
-      int pos = input.find(" ");
-      std::string str = input.substr(pos+1);
-      std::cout << str << std::endl;
-
-    } else if(input.find("type") != std::string::npos){
+    } 
+    else if(input.find("type") != std::string::npos)
+    {
       int pos = input.find(" ");
       std::string str = input.substr(pos+1);
       if(str == "echo" || str == "exit" || str == "type"){
@@ -26,7 +24,16 @@ int main() {
       } else {
         std::cout << str << ": not found" << std::endl;
       }
-    } else {
+    } 
+    else if(input.find("echo") != std::string::npos)
+    {
+      int pos = input.find(" ");
+      std::string str = input.substr(pos+1);
+      std::cout << str << std::endl;
+
+    } 
+    else 
+    {
       std::cout << input << ": command not found" << std::endl;
     }
 
