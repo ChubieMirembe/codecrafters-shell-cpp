@@ -24,7 +24,7 @@ int main() {
       if(str == "echo" || str == "exit" || str == "type"){
         std::cout << str << " is a shell builtin" << std::endl;
       } else {
-        std::cout << str << ": not found" << std:endl;
+        std::cout << str << ": not found" << std::endl;
       }
     } else {
       std::cout << input << ": command not found" << std::endl;
